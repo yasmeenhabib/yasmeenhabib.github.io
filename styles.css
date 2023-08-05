@@ -7,6 +7,8 @@ body, html {
 .typewriter {
   position: relative;
   display: inline-block;
+  font-weight: bold;
+  font-size: 28px;
 }
 #cursor {
   position: absolute;
