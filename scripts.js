@@ -1,22 +1,3 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
-// JavaScript to toggle the navigation menu for small screens
-document.addEventListener("DOMContentLoaded", function() {
-  const navbarToggler = document.getElementById("navbar-toggler");
-  const navbarNav = document.getElementById("navbar-nav");
-
-  navbarToggler.addEventListener("click", function() {
-    navbarNav.classList.toggle("show");
-  });
-});
 //type
 const textElement = document.getElementById("text");
 const words = ["HTML/CSS ", "JavaScript ", "MySQL ", "Laravel ", "SAP ABAP "];
