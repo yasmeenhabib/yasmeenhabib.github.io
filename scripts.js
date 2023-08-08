@@ -32,3 +32,33 @@ function type() {
 }
 
 type();
+// JavaScript to toggle dark mode
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const toggleSlider = document.getElementById('mode-toggle');
+//   let isDarkMode = false;
+
+//   toggleSlider.addEventListener('click', () => {
+//     isDarkMode = !isDarkMode;
+//     if (isDarkMode) {
+//       document.getElementById('theme-style').setAttribute('href', 'dark.css');
+//     } else {
+//       document.getElementById('theme-style').setAttribute('href', 'styles.css');
+//     }
+//   });
+// });
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleSlider = document.getElementById('mode-toggle');
+  let isDarkMode = false;
+
+  toggleSlider.addEventListener('click', () => {
+    isDarkMode = !isDarkMode;
+    if (isDarkMode) {
+      document.getElementById('theme-style').setAttribute('href', 'dark.css');
+      toggleSlider.classList.add('on');
+    } else {
+      document.getElementById('theme-style').setAttribute('href', 'styles.css');
+      toggleSlider.classList.remove('on');
+    }
+  });
+});
