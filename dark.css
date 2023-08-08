@@ -1,0 +1,60 @@
+@import url("common.css");
+
+/* Dark Mode Styles */
+
+
+.background {
+  position: relative;
+  background-color: #353232; /* Warmer Black #262626*/
+  overflow: auto;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+}
+
+/* Diagonal numbers on the left */
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*110, 136, 152, rgba( 0.8)*/
+  background-image: linear-gradient(to bottom right, rgba(68, 88, 100, 0.8) 2px, transparent 2px), /* Smoky Blue #6E8898FF */
+                    url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ctext x='0' y='15' font-size='14' fill='rgba(110, 136, 152, 0.8)'%3E1%3C/text%3E%3Ctext x='10' y='25' font-size='14' fill='rgba(110, 136, 152, 0.8)'%3E2%3C/text%3E%3Ctext x='20' y='35' font-size='14' fill='rgba(110, 136, 152, 0.8)'%3E3%3C/text%3E%3Ctext x='30' y='45' font-size='14' fill='rgba(110, 136, 152, 0.8)'%3E4%3C/text%3E%3Ctext x='40' y='55' font-size='14' fill='rgba(110, 136, 152, 0.8)'%3E5%3C/text%3E%3Ctext x='50' y='65' font-size='14' fill='rgba(110, 136, 152, 0.8)'%3E6%3C/text%3E%3Ctext x='60' y='75' font-size='14' fill='rgba(110, 136, 152, 0.8)'%3E7%3C/text%3E%3Ctext x='70' y='85' font-size='14' fill='rgba(110, 136, 152, 0.8)'%3E8%3C/text%3E%3C/text%3E");
+  background-size: 10px 10px;
+}
+
+/* Horizontal lines */
+.background::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(68, 88, 100, 0.8s) 2px, transparent 2px); /* Smoky Blue #6E8898FF */
+  pointer-events: none;
+  z-index: -1;
+  animation: lines-animation 10s linear infinite;
+}
+
+.section p {
+ 
+  color: aliceblue;
+}
+.ic , .resume-button{
+
+	background-color: aliceblue;
+	padding: 10px;
+	border-radius: 12px;
+	color: 	black;
+}
+
+.toggle-slider {
+	background-color: #d0d0d0;
+	
+}

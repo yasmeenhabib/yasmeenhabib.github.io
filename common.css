@@ -1,0 +1,194 @@
+
+/* Additional styles for the toggle */
+.toggle-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.toggle-slider {
+  /* Same styles as before */
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #393232;
+  border-radius: 15px;
+}
+
+.slider-moon {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* Moon shape when toggle is on */
+.toggle-slider.on .slider-moon {
+  transform: translateX(30px);
+  background-color: #000;
+}
+
+/*
+.toggle-container {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 36px;
+  border-radius: 30px;
+  background-color: #bbb; /* Default background color */
+/*  cursor: pointer;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 32px;
+  height: 32px;
+  background-color: #fff; /* Default slider color */
+/*  border-radius: 50%;
+  transition: transform 0.2s;
+}*/
+/*/
+/* Unchecked state styles */
+/*.toggle-container:not(.active) .toggle-slider {
+  transform: translateX(0);
+  background-color: #bbb; /* Default background color */
+}
+
+/* Checked state styles */
+/*.toggle-container.active .toggle-slider {
+  transform: translateX(100%);
+  background-color: #E67E22;  Light mode background color 
+}
+
+/* Additional styles for better visual */
+/*.toggle-container {
+  margin-top: 20px;
+}
+*/
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+.typewriter {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 28px;
+}
+#cursor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #000;
+  animation: blink 0.7s infinite;
+}
+/* Center the text in the middle of the screen */
+.content-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    /* Add some padding to separate content from the navbar */
+  padding-top: 70px;
+  /* Add a margin to position the content below the fixed navbar */
+  margin-top: 50px;
+}
+/* Adjust content width if necessary */
+.content-wrapper {
+max-width: 800px;    /*Set the desired max-width for the centered content */
+  width: 100%;
+  padding: 20px;
+}
+.section {
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+.section h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.section p {
+  font-size: 18px;
+ /* color: #666;*/
+}
+.tooltipp {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.tooltipp::before {
+  content: "Its me";
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+.tooltipp:hover::before {
+  display: block;
+}
+.icons {
+  margin-top: 20px;
+}
+.icons a {
+  margin: 0 10px;
+  color: #333;
+  font-size: 24px;
+  text-decoration: none;
+}
+/* CSS Styles for the Resume Button */
+.resume-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #393232;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.resume-button:hover {
+  background-color: #bbb;
+  text-decoration: none;
+  color: black;
+}
+
+
+
+@keyframes lines-animation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -100px;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+
